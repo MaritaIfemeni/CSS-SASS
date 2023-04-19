@@ -1,0 +1,10 @@
+#
+.vscode
+.DS_Store
+
+# modules
+node_modules/
+package-lock.json
+
+
+
