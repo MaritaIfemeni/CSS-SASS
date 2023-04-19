@@ -1,0 +1,18 @@
+.subscribe-section {
+    display: grid;
+    grid-template-areas:
+      "item1 item1"
+      "item1 item1";
+    gap: 1em;
+  }
+
+  .subscribe-section__content {
+    grid-area: item1;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5em;
+  }
+
+

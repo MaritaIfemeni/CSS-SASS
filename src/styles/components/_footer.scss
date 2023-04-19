@@ -1,0 +1,23 @@
+.footer__grid {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    gap: 1em 1em; 
+    grid-template-areas: 
+      "logo menu"; 
+  }
+
+    .footer-social {
+        grid-area: menu;
+        background-color: aqua;
+    }
+
+    .footer__grid__nav ul {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto auto auto auto;
+        gap: 0.5em;
+      }
+      
+      .footer__grid__nav li {
+        list-style: none;
+        background-color: aqua;
+      }
