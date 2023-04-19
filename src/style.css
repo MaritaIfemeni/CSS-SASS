@@ -1,5 +1,29 @@
+.header__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em 1em;
+  grid-template-areas: "logo menu";
+}
+
+.header__container__inner {
+  grid-area: logo;
+  background-color: aqua;
+}
+
+.nav ul {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto;
+  gap: 0.5em;
+}
+
+.nav li {
+  list-style: none;
+  background-color: aqua;
+}
+
 body {
   color: aqua;
+  background-color: rgba(20, 20, 30, 0.9176470588);
 }
 
 /*# sourceMappingURL=style.css.map */
