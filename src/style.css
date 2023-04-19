@@ -3,6 +3,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 1em 1em;
   grid-template-areas: "logo menu";
+  padding: 1em;
 }
 
 .header__container__inner {
@@ -27,10 +28,28 @@
   background-color: aqua;
 }
 
+.content {
+  display: grid;
+  grid-template-columns: 0.1fr 1.9fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "side main";
+  max-width: 90%;
+}
+
+.content__sidebar {
+  grid-area: side;
+}
+
+F .content_main {
+  grid-area: main;
+}
+
 .top-section__grid {
   display: grid;
   grid-template-areas: "item1 item2 item3" "item1 item4 item5 ";
   gap: 1em;
+  padding-bottom: 3em;
 }
 
 .top-section__grid__item {
@@ -69,10 +88,14 @@
 .article-section__grid {
   display: grid;
   grid-template-areas: "item1" "item2" "item3";
-  gap: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 3em;
+  padding-right: 3em;
+  gap: 3em;
 }
 
-.top-section__grid__item {
+.article-section__grid__item {
   color: aliceblue;
   display: flex;
   justify-content: center;
@@ -102,11 +125,16 @@
   padding: 1em;
   background-color: #f1f1f1;
   border-radius: 5px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 3em;
+  padding-right: 3em;
 }
 
 .old-article-section__grid {
   display: grid;
   grid-template-areas: "item1 item1 item1 item2 item2 item2" "item1 item1 item1 item2 item2 item2" "item3 item3 item4 item4 item5 item5";
+  padding: 3em;
   gap: 1em;
 }
 
