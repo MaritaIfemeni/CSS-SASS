@@ -6,8 +6,9 @@
 @use "components/subscribesection";
 @use "components/footer";
 
+@use "variables/colors";
+@use "variables/fonts";
 body {
-    color: aqua;
-    background-color:#14141eea;
-
+    background-color:colors.$theme-primary;
+    font-family: fonts.$font-family-main;
 }

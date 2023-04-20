@@ -7,6 +7,10 @@
   padding-bottom: 3em;
 }
 
+a {
+  text-decoration: none;
+}
+
 .top-section__grid__item {
   border-radius: 1.5em;
 }
@@ -23,25 +27,7 @@
   background-repeat: no-repeat;
 }
 
-.card-image {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Replace with your desired color and opacity */
-}
 
 .top-section__grid__item:nth-child(2) {
   grid-area: item2;
@@ -81,7 +67,8 @@
   display: grid;
 }
 
-.card__pinned {
+
+.card__pinned--light {
   display: inline-block;
   background-color: white;
   color: black;
@@ -91,7 +78,69 @@
   text-decoration: none;
 }
 
+.card__pinned--light a {
+  color: black;
+}
+.card__pinned--dark a {
+  color:white;
+}
+
+.card__pinned--dark {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 3em;
+  text-decoration: none;
+}
+
 .card__text {
   grid-area: item2;
   padding: 0.5em;
+}
+
+.card-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5em;
+}
+
+.card__text__title {
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-size: 1.5em;
+}
+
+.card__text__sub-title {
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-size: 1.5em;
+}
+
+.card-item--dark * {
+  color:black
+}
+
+.card-item--light * {
+  color:white;
+}
+
+.card-image--overlay-blue .overlay {
+  background-color: rgba(7, 83, 248, 0.47);
+}
+
+.card-image--overlay-pink .overlay {
+  background-color: rgba(255, 192, 203, 0.47);
 }
