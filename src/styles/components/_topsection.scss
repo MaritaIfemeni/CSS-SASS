@@ -11,29 +11,66 @@
   border-radius: 1.5em;
 }
 
+.top-section__grid__item:hover {
+  transform: translateY(-5px);
+  transition: all 0.5s;
+}
+
 .top-section__grid__item:nth-child(1) {
   grid-area: item1;
-  background-image: url(./img/testimage.png);
+  background-image: url(./img/image1.png);
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.card-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Replace with your desired color and opacity */
 }
 
 .top-section__grid__item:nth-child(2) {
   grid-area: item2;
   background-color: red;
+  background-image: url(./img/image2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .top-section__grid__item:nth-child(3) {
   grid-area: item3;
   background-color: green;
+  background-image: url(./img/image3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .top-section__grid__item:nth-child(4) {
   grid-area: item4;
   background-color: yellow;
+  background-image: url(./img/image4.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .top-section__grid__item:nth-child(5) {
   grid-area: item5;
   background-color: purple;
+  background-image: url(./img/image5.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .card {
@@ -43,6 +80,7 @@
     "item3 item3 item3";
   display: grid;
 }
+
 .card__pinned {
   display: inline-block;
   background-color: white;
