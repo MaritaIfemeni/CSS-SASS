@@ -1,29 +1,44 @@
-.header__container {
-    display: grid; 
-    grid-template-columns: 1fr 1fr;
-    gap: 1em 1em; 
-    grid-template-areas: 
-      "logo menu"; 
-    padding: 1em;
+@use "../variables/colors" as link;
+@use "../variables/fonts" as font;
+
+
+/* make extend/ mixing for for the link dec
+make the hoover effect whit right colors*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em;
+  font-size: 1.3em;
+  & img {
+    height: 2.5em;
   }
-
-    .header__container__inner {
-        grid-area: logo;
-        background-color: aqua;
+  & nav {
+    & a {
+      text-decoration: none;
+      color: link.$link-light;
+      margin-right: 1em;
+      &:hover::after {
+        content: "";
+        height: 0.2em;
+        width: 0.2em;
+        border-radius: 50%;
+        background-color: link.$link-light;
+        position: absolute;
+      }
     }
-
-    .header__menu {
-        grid-area: menu;
-        background-color: rgb(115, 0, 255);}
-
-    .nav ul {
-        display: grid;
-        justify-content: flex-end;
-        grid-template-columns: auto auto auto auto auto auto auto auto auto;
-        gap: 0.5em;
+    & a:first-child {
+      &::after {
+        content: "";
+        height: 0.2em;
+        width: 0.2em;
+        border-radius: 50%;
+        background-color: link.$link-light;
+        position: absolute;
       }
-      
-      .nav li {
-        list-style: none;
-        background-color: aqua;
-      }
+    }
+    & i {
+      color: link.$link-light;
+    }
+  }
+}

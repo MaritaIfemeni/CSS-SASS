@@ -1,23 +1,51 @@
-.footer__grid {
-    display: grid; 
-    grid-template-columns: 1fr 1fr;
-    gap: 1em 1em; 
-    grid-template-areas: 
-      "logo menu"; 
-  }
+@use "../variables/colors" as link;
+@use "../variables/fonts" as font;
 
-    .footer-social {
-        grid-area: menu;
-        background-color: aqua;
+/* Make the hoove work and change the colors of the social icons
+and use the extend for the links*/
+/*Make nav bar hoover*/
+
+.footer-nav-wrapper {
+  display: grid;
+  grid-template-areas:
+    "nav1 nav2"
+    "social .";
+  justify-content: space-between;
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+  & nav {
+    grid-area: "nav";
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+    & a {
+      text-decoration: none;
+      color: link.$link-light;
+      margin-right: 1em;
+      padding: 1%;
+      &:hover::after {
+        content: "";
+        height: 0.2em;
+        width: 0.2em;
+        border-radius: 50%;
+        background-color: link.$link-dark;
+        position: absolute;
+      }
     }
-
-    .footer__grid__nav ul {
-        display: grid;
-        grid-template-columns: auto auto auto auto auto auto auto auto auto;
-        gap: 0.5em;
-      }
-      
-      .footer__grid__nav li {
-        list-style: none;
-        background-color: aqua;
-      }
+    & i {
+      padding: 10%;
+      font-size: 1.5em;
+      color: #f8f8f8;
+    }
+  }
+}
+.rights {
+  grid-area: "social";
+  display: flex;
+  margin-left: 10%;
+  & p {
+    font-size: 1em;
+    color: #f8f8f8;
+  }
+}

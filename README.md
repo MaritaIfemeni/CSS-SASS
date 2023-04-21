@@ -6,7 +6,7 @@ In this project I practiced grid layout and how to use SCSS and use of BEM metho
 
 ## Link to the project
 
-Checkout the project from **[here](https://maritaifemeni.github.io/fs15_2-responsive-design/)**.
+Checkout the project from TODO: add the link later **[here]()**.
 
 ---
 ## Technologies

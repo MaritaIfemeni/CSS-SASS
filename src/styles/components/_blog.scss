@@ -1,0 +1,33 @@
+.blog {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding-top: 3em;
+  padding-bottom: 1em;
+  padding-left: 3em;
+  padding-right: 3em;
+  justify-content: center;
+  border-radius: 3em;
+& article:nth-child(1) {
+    background-color: red;
+  }
+& article:nth-child(2) {
+    background-color: blue;
+  }
+& article:nth-child(3) {
+    background-color: green;
+  }
+}
+
+.divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 3em;
+  padding-right: 3em;
+}

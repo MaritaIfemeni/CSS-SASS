@@ -1,14 +1,43 @@
-.content {
-  display: grid;
-  grid-template-columns: 0.1fr 1.9fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-template-areas: "side main";
-  max-width: 90%;
-}
-.content__sidebar {
-  grid-area: side;
-}
-F .content_main {
-  grid-area: main;
-}
+/*add side bar colors and use variables for colors*/
+
+
+.load-more {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    background-color: gray;
+    border-radius: 5px;
+    max-width: 90%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        background-color: #fbd603c2;
+        transition: background-color 0.5s ease-in-out;
+    }
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 2em;
+    height: 100%;
+    background-color:black;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    & p {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        transform: rotate(180deg);
+        margin: 0;
+        padding: 0;
+        font-size: 1.5em;
+        color: #f8f8f8;
+    }
+  }
+

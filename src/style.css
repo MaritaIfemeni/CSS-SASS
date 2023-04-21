@@ -1,219 +1,123 @@
-.header__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1em 1em;
-  grid-template-areas: "logo menu";
-  padding: 1em;
+/* make extend/ mixing for for the link dec
+make the hoover effect whit right colors*/
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em;
+  font-size: 1.3em;
 }
-
-.header__container__inner {
-  grid-area: logo;
-  background-color: aqua;
+header img {
+  height: 2.5em;
 }
-
-.header__menu {
-  grid-area: menu;
-  background-color: rgb(115, 0, 255);
-}
-
-.nav ul {
-  display: grid;
-  justify-content: flex-end;
-  grid-template-columns: auto auto auto auto auto auto auto auto auto;
-  gap: 0.5em;
-}
-
-.nav li {
-  list-style: none;
-  background-color: aqua;
-}
-
-.content {
-  display: grid;
-  grid-template-columns: 0.1fr 1.9fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-template-areas: "side main";
-  max-width: 90%;
-}
-
-.content__sidebar {
-  grid-area: side;
-}
-
-F .content_main {
-  grid-area: main;
-}
-
-.top-section__grid {
-  display: grid;
-  grid-template-areas: "item1 item2 item3" "item1 item4 item5 ";
-  gap: 1em;
-  padding-bottom: 3em;
-}
-
-a {
+header nav a {
   text-decoration: none;
+  color: white;
+  margin-right: 1em;
+}
+header nav a:hover::after {
+  content: "";
+  height: 0.2em;
+  width: 0.2em;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+}
+header nav a:first-child::after {
+  content: "";
+  height: 0.2em;
+  width: 0.2em;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+}
+header nav i {
+  color: white;
 }
 
-.top-section__grid__item {
-  border-radius: 1.5em;
+/*add side bar colors and use variables for colors*/
+.load-more {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  background-color: gray;
+  border-radius: 5px;
+  max-width: 90%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.load-more:hover {
+  background-color: rgba(251, 214, 3, 0.7607843137);
+  transition: background-color 0.5s ease-in-out;
 }
 
-.top-section__grid__item:hover {
-  transform: translateY(-5px);
-  transition: all 0.5s;
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 2em;
+  height: 100%;
+  background-color: black;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-
-.top-section__grid__item:nth-child(1) {
-  grid-area: item1;
-  background-image: url(./img/image1.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.top-section__grid__item:nth-child(2) {
-  grid-area: item2;
-  background-color: red;
-  background-image: url(./img/image2.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.top-section__grid__item:nth-child(3) {
-  grid-area: item3;
-  background-color: green;
-  background-image: url(./img/image3.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.top-section__grid__item:nth-child(4) {
-  grid-area: item4;
-  background-color: yellow;
-  background-image: url(./img/image4.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.top-section__grid__item:nth-child(5) {
-  grid-area: item5;
-  background-color: purple;
-  background-image: url(./img/image5.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+.sidebar p {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+  color: #f8f8f8;
 }
 
 .card {
-  grid-template-areas: "item1 . ." "item2 item2 item2" "item3 item3 item3";
   display: grid;
+  grid-template-areas: "item1 item1 item2 item3" "item1 item1 item4 item5";
+  gap: 2em;
 }
-
-.card__pinned--light {
-  display: inline-block;
-  background-color: white;
-  color: black;
-  padding: 10px 20px;
-  border-radius: 5px;
-  width: 3em;
-  text-decoration: none;
+.card article:nth-child(1) {
+  grid-area: item1;
+  background-color: aqua;
 }
-
-.card__pinned--light a {
-  color: black;
-}
-
-.card__pinned--dark a {
-  color: white;
-}
-
-.card__pinned--dark {
-  display: inline-block;
-  background-color: black;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  width: 3em;
-  text-decoration: none;
-}
-
-.card__text {
+.card article:nth-child(2) {
   grid-area: item2;
-  padding: 0.5em;
+  background-color: aqua;
+}
+.card article:nth-child(3) {
+  grid-area: item3;
+  background-color: aqua;
+}
+.card article:nth-child(4) {
+  grid-area: item4;
+  background-color: aqua;
+}
+.card article:nth-child(5) {
+  grid-area: item5;
+  background-color: aqua;
 }
 
-.card-image {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 1.5em;
-}
-
-.card__text__title {
-  position: relative;
-  z-index: 2;
-  color: white;
-  font-size: 1.5em;
-}
-
-.card__text__sub-title {
-  position: relative;
-  z-index: 2;
-  color: white;
-  font-size: 1.5em;
-}
-
-.card-item--dark * {
-  color: black;
-}
-
-.card-item--light * {
-  color: white;
-}
-
-.card-image--overlay-blue .overlay {
-  background-color: rgba(7, 83, 248, 0.47);
-}
-
-.card-image--overlay-pink .overlay {
-  background-color: rgba(255, 192, 203, 0.47);
-}
-
-.article-section__grid {
-  display: grid;
-  grid-template-areas: "item1" "item2" "item3";
-  padding-top: 1em;
+.blog {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding-top: 3em;
   padding-bottom: 1em;
   padding-left: 3em;
   padding-right: 3em;
-  gap: 3em;
+  justify-content: center;
+  border-radius: 3em;
 }
-
-.article-section__grid__item {
-  padding: 12em;
-  border-radius: 1em;
-}
-
-.article-section__grid__item:nth-child(1) {
-  grid-area: item1;
-  background-color: rgb(108, 108, 210);
-}
-
-.article-section__grid__item:nth-child(2) {
-  grid-area: item2;
+.blog article:nth-child(1) {
   background-color: red;
 }
-
-.article-section__grid__item:nth-child(3) {
-  grid-area: item3;
+.blog article:nth-child(2) {
+  background-color: blue;
+}
+.blog article:nth-child(3) {
   background-color: green;
 }
 
@@ -230,96 +134,160 @@ a {
   padding-right: 3em;
 }
 
-.old-article-section__grid {
+.old-blog {
   display: grid;
   grid-template-areas: "item1 item1 item1 item2 item2 item2" "item1 item1 item1 item2 item2 item2" "item3 item3 item4 item4 item5 item5";
   padding: 3em;
   gap: 1em;
 }
-
-.old-article-section__grid__item {
-  color: aliceblue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5em;
-}
-
-.old-article-section__grid__item:nth-child(1) {
+.old-blog article:nth-child(1) {
   grid-area: item1;
-  background-color: blue;
+  background-color: aqua;
 }
-
-.old-article-section__grid__item:nth-child(2) {
+.old-blog article:nth-child(2) {
   grid-area: item2;
-  background-color: red;
+  background-color: aqua;
 }
-
-.old-article-section__grid__item:nth-child(3) {
+.old-blog article:nth-child(3) {
   grid-area: item3;
-  background-color: green;
+  background-color: aqua;
 }
-
-.old-article-section__grid__item:nth-child(4) {
+.old-blog article:nth-child(4) {
   grid-area: item4;
-  background-color: yellow;
+  background-color: aqua;
 }
-
-.old-article-section__grid__item:nth-child(5) {
+.old-blog article:nth-child(5) {
   grid-area: item5;
-  background-color: purple;
+  background-color: aqua;
 }
 
-.load-more {
+/* Use color variable, make variable from padding
+and maybe for font size */
+.subscribe {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  margin: auto;
+  padding: 2em;
+}
+.subscribe h3 {
+  margin: auto;
+  padding: 2em;
+  font-size: 2.5em;
+}
+.subscribe p {
+  font-size: 2em;
+  margin: auto;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 5s steps(30) infinite alternate, blinking 0.1s infinite;
+  border-right: 1px solid white;
+}
+.subscribe form {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 1em;
-  background-color: #f1f1f1;
+  padding: 2em;
+}
+.subscribe form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  width: 70%;
+  transition: width 1s linear;
+  text-align: center;
+  font-size: 1.5em;
+}
+.subscribe form input:focus {
+  outline: none;
+  width: 80%;
+}
+.subscribe button {
+  background-color: transparent;
+  border: 1px solid white;
   border-radius: 5px;
+  padding: 1em;
+  margin: auto;
+  margin-top: 1em;
+  color: white;
+  font-size: 1.5em;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+}
+.subscribe button:hover {
+  background-color: white;
+  color: black;
 }
 
-.subscribe-section {
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 55%;
+  }
+  80% { /* hold the text for 1 second */
+    width: 55%;
+  }
+}
+@keyframes blinking {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+/* Make the hoove work and change the colors of the social icons
+and use the extend for the links*/
+/*Make nav bar hoover*/
+.footer-nav-wrapper {
   display: grid;
-  grid-template-areas: "item1 item1" "item1 item1";
-  gap: 1em;
+  grid-template-areas: "nav1 nav2" "social .";
+  justify-content: space-between;
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
-
-.subscribe-section__content {
-  grid-area: item1;
-  color: aliceblue;
+.footer-nav-wrapper nav {
+  grid-area: "nav";
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5em;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+.footer-nav-wrapper nav a {
+  text-decoration: none;
+  color: white;
+  margin-right: 1em;
+  padding: 1%;
+}
+.footer-nav-wrapper nav a:hover::after {
+  content: "";
+  height: 0.2em;
+  width: 0.2em;
+  border-radius: 50%;
+  background-color: rgba(9, 9, 24, 0.9176470588);
+  position: absolute;
+}
+.footer-nav-wrapper nav i {
+  padding: 10%;
+  font-size: 1.5em;
+  color: #f8f8f8;
 }
 
-.footer__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1em 1em;
-  grid-template-areas: "logo menu";
+.rights {
+  grid-area: "social";
+  display: flex;
+  margin-left: 10%;
 }
-
-.footer-social {
-  grid-area: menu;
-  background-color: aqua;
-}
-
-.footer__grid__nav ul {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto auto auto;
-  gap: 0.5em;
-}
-
-.footer__grid__nav li {
-  list-style: none;
-  background-color: aqua;
+.rights p {
+  font-size: 1em;
+  color: #f8f8f8;
 }
 
 body {
+  margin: 4em;
   background-color: rgba(20, 20, 30, 0.9176470588);
   font-family: "Georgia", "Times New Roman", Times, serif;
 }

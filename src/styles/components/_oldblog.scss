@@ -1,0 +1,30 @@
+.old-blog {
+  display: grid;
+  grid-template-areas:
+    "item1 item1 item1 item2 item2 item2"
+    "item1 item1 item1 item2 item2 item2"
+    "item3 item3 item4 item4 item5 item5" ;
+  padding: 3em;
+  gap: 1em;
+  & article:nth-child(1) {
+    grid-area: item1;
+    background-color: aqua;
+  }
+  & article:nth-child(2) {
+    grid-area: item2;
+    background-color: aqua;
+  }
+  & article:nth-child(3) {
+    grid-area: item3;
+    background-color: aqua;
+  }
+  & article:nth-child(4) {
+    grid-area: item4;
+    background-color: aqua;
+  }
+  & article:nth-child(5) {
+    grid-area: item5;
+    background-color: aqua;
+  }
+}
+

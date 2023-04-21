@@ -1,14 +1,17 @@
 @use "components/header";
 @use "components/main";
-@use "components/topsection";
-@use "components/articlesection";
-@use "components/oldarticlesection";
+@use "components/card";
+@use "components/blog";
+@use "components/oldblog";
 @use "components/subscribesection";
 @use "components/footer";
 
 @use "variables/colors";
 @use "variables/fonts";
+
 body {
+    margin: 4em;
     background-color:colors.$theme-primary;
     font-family: fonts.$font-family-main;
 }
+

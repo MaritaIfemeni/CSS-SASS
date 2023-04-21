@@ -1,18 +1,72 @@
-.subscribe-section {
-    display: grid;
-    grid-template-areas:
-      "item1 item1"
-      "item1 item1";
-    gap: 1em;
-  }
+/* Use color variable, make variable from padding
+and maybe for font size */
 
-  .subscribe-section__content {
-    grid-area: item1;
-    color: aliceblue;
+.subscribe {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  margin: auto;
+  padding: 2em;
+  & h3 {
+    margin: auto;
+    padding: 2em;
+    font-size: 2.5em;
+  }
+  & p {
+    font-size: 2em;
+    margin: auto;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 5s steps(30) infinite alternate, blinking 0.1s infinite;
+    border-right: 1px solid white;
+  }
+  & form {
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 5em;
+    padding: 2em;
+    & input {
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid white;
+      width: 70%;
+      transition: width 1s linear;
+      text-align: center;
+      font-size: 1.5em;
+      &:focus {
+        outline: none;
+        width: 80%;
+      }
+    }
   }
+  & button {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 1em;
+    margin: auto;
+    margin-top: 1em;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+}
 
+@keyframes typing {
+  from { width: 0 }
+  to { width: 55% }
+  80% { /* hold the text for 1 second */
+    width: 55%;
+  }
+}
 
+@keyframes blinking {
+  from, to { border-color: transparent }
+  50% { border-color: white }
+}
