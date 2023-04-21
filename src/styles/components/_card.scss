@@ -1,27 +1,67 @@
+/* add color variables and make button, 
+add font size variable etc. use light and tark theme colors*/
+
 .card {
   display: grid;
   grid-template-areas:
     "item1 item1 item2 item3"
     "item1 item1 item4 item5";
   gap: 2em;
+  & p {
+    padding-top: 2em;
+  }
+  & button {
+    border-radius: 1em;
+    border-color: rgba(0, 0, 0, 0.263);
+  }
+  & .lower {
+    padding-top: 17em;
+  }
+  & article {
+    border-radius: 2em;
+    padding: 2em;
+    &:hover {
+      transform: translateY(-1.5%);
+      transition: all 0.5s;
+      cursor: pointer;
+    }
+  }
   & article:nth-child(1) {
     grid-area: item1;
-    background-color: aqua;
+    background-image: url(./img/image1.png),
+    linear-gradient(rgba(74, 46, 26, 0.402), #423f2680);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
   }
   & article:nth-child(2) {
     grid-area: item2;
-    background-color: aqua;
+    background-image: url(./img/image2.png),
+    linear-gradient(rgba(26, 37, 74, 0.402), #31299a80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
   }
   & article:nth-child(3) {
-    grid-area: item3;
-    background-color: aqua;
+    background-image: url(./img/image3.png),
+    linear-gradient(rgba(165, 110, 34, 0.402), #da8d2080);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
   }
   & article:nth-child(4) {
-    grid-area: item4;
-    background-color: aqua;
+    background-image: url(./img/image4.png),
+    linear-gradient(rgba(195, 16, 235, 0.402), #460b3c80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
   }
   & article:nth-child(5) {
     grid-area: item5;
-    background-color: aqua;
+    background-image: url(./img/image5.png),
+    linear-gradient(rgba(235, 16, 173, 0.402), #d53ebc80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
   }
 }

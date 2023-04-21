@@ -3,7 +3,7 @@
 
 /* Make the hoove work and change the colors of the social icons
 and use the extend for the links*/
-/*Make nav bar hoover*/
+/*Make nav hoover righ color use var*/
 
 .footer-nav-wrapper {
   display: grid;
@@ -29,7 +29,7 @@ and use the extend for the links*/
         height: 0.2em;
         width: 0.2em;
         border-radius: 50%;
-        background-color: link.$link-dark;
+        background-color: link.$link-light;
         position: absolute;
       }
     }
@@ -37,6 +37,9 @@ and use the extend for the links*/
       padding: 10%;
       font-size: 1.5em;
       color: #f8f8f8;
+      &:hover {
+        color: yellow;
+      }
     }
   }
 }

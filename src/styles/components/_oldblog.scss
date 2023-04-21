@@ -1,30 +1,60 @@
+/* make variables, color thing, optomize code?*/
+
 .old-blog {
   display: grid;
   grid-template-areas:
     "item1 item1 item1 item2 item2 item2"
     "item1 item1 item1 item2 item2 item2"
-    "item3 item3 item4 item4 item5 item5" ;
-  padding: 3em;
+    "item3 item3 item4 item4 item5 item5";
   gap: 1em;
+  & article {
+    border-radius: 2em;
+    padding: 5em;
+    }
   & article:nth-child(1) {
     grid-area: item1;
-    background-color: aqua;
+    background-image: url(./img/image2.png),
+      linear-gradient(rgba(230, 127, 54, 0.402), #8d552d80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
   }
   & article:nth-child(2) {
     grid-area: item2;
-    background-color: aqua;
+    background-image: url(./img/image2.png),
+      linear-gradient(rgba(230, 127, 54, 0.402), #8d552d80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
   }
   & article:nth-child(3) {
     grid-area: item3;
-    background-color: aqua;
+    background-image: url(./img/image2.png),
+      linear-gradient(rgba(230, 127, 54, 0.402), #8d552d80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
   }
   & article:nth-child(4) {
     grid-area: item4;
-    background-color: aqua;
+    background-image: url(./img/image2.png),
+      linear-gradient(rgba(230, 127, 54, 0.402), #8d552d80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
   }
   & article:nth-child(5) {
     grid-area: item5;
-    background-color: aqua;
+    background-image: url(./img/image2.png),
+      linear-gradient(rgba(230, 127, 54, 0.402), #8d552d80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
   }
-}
 
+  .blog__grid-item:hover {
+    background-size: 110%;
+  }
+
+
+}

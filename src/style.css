@@ -74,51 +74,98 @@ header nav i {
   color: #f8f8f8;
 }
 
+/* add color variables and make button, 
+add font size variable etc. use light and tark theme colors*/
 .card {
   display: grid;
   grid-template-areas: "item1 item1 item2 item3" "item1 item1 item4 item5";
   gap: 2em;
 }
+.card p {
+  padding-top: 2em;
+}
+.card button {
+  border-radius: 1em;
+  border-color: rgba(0, 0, 0, 0.263);
+}
+.card .lower {
+  padding-top: 17em;
+}
+.card article {
+  border-radius: 2em;
+  padding: 2em;
+}
+.card article:hover {
+  transform: translateY(-1.5%);
+  transition: all 0.5s;
+  cursor: pointer;
+}
 .card article:nth-child(1) {
   grid-area: item1;
-  background-color: aqua;
+  background-image: url(./img/image1.png), linear-gradient(rgba(74, 46, 26, 0.402), rgba(66, 63, 38, 0.5019607843));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
 }
 .card article:nth-child(2) {
   grid-area: item2;
-  background-color: aqua;
+  background-image: url(./img/image2.png), linear-gradient(rgba(26, 37, 74, 0.402), rgba(49, 41, 154, 0.5019607843));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
 }
 .card article:nth-child(3) {
-  grid-area: item3;
-  background-color: aqua;
+  background-image: url(./img/image3.png), linear-gradient(rgba(165, 110, 34, 0.402), rgba(218, 141, 32, 0.5019607843));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
 }
 .card article:nth-child(4) {
-  grid-area: item4;
-  background-color: aqua;
+  background-image: url(./img/image4.png), linear-gradient(rgba(195, 16, 235, 0.402), rgba(70, 11, 60, 0.5019607843));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
 }
 .card article:nth-child(5) {
   grid-area: item5;
-  background-color: aqua;
+  background-image: url(./img/image5.png), linear-gradient(rgba(235, 16, 173, 0.402), rgba(213, 62, 188, 0.5019607843));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
 }
 
+/*ad variables ets ADN can you find 
+a way how to apply a style in evey other item?
+
+nd hoer is not workingS*/
 .blog {
   display: flex;
   flex-direction: column;
   gap: 2em;
-  padding-top: 3em;
-  padding-bottom: 1em;
-  padding-left: 3em;
-  padding-right: 3em;
   justify-content: center;
+  margin: 5em;
+}
+.blog article {
+  padding: 12em;
   border-radius: 3em;
+  cursor: pointer;
 }
 .blog article:nth-child(1) {
-  background-color: red;
+  background-image: url(./img/image1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
 }
 .blog article:nth-child(2) {
-  background-color: blue;
+  background-image: url(./img/image2.png), linear-gradient(rgba(230, 127, 54, 0.402), rgba(141, 85, 45, 0.5019607843));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
 }
 .blog article:nth-child(3) {
-  background-color: green;
+  background-image: url(./img/image4.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .divider {
@@ -126,39 +173,59 @@ header nav i {
   justify-content: center;
   align-items: center;
   padding: 1em;
-  background-color: #f1f1f1;
+  color: #f1f1f1;
   border-radius: 5px;
-  padding-top: 1em;
-  padding-bottom: 1em;
   padding-left: 3em;
   padding-right: 3em;
 }
 
+/* make variables, color thing, optomize code?*/
 .old-blog {
   display: grid;
   grid-template-areas: "item1 item1 item1 item2 item2 item2" "item1 item1 item1 item2 item2 item2" "item3 item3 item4 item4 item5 item5";
-  padding: 3em;
   gap: 1em;
+}
+.old-blog article {
+  border-radius: 2em;
+  padding: 5em;
 }
 .old-blog article:nth-child(1) {
   grid-area: item1;
-  background-color: aqua;
+  background-image: url(./img/image2.png), linear-gradient(rgba(230, 127, 54, 0.402), rgba(141, 85, 45, 0.5019607843));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
 }
 .old-blog article:nth-child(2) {
   grid-area: item2;
-  background-color: aqua;
+  background-image: url(./img/image2.png), linear-gradient(rgba(230, 127, 54, 0.402), rgba(141, 85, 45, 0.5019607843));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
 }
 .old-blog article:nth-child(3) {
   grid-area: item3;
-  background-color: aqua;
+  background-image: url(./img/image2.png), linear-gradient(rgba(230, 127, 54, 0.402), rgba(141, 85, 45, 0.5019607843));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
 }
 .old-blog article:nth-child(4) {
   grid-area: item4;
-  background-color: aqua;
+  background-image: url(./img/image2.png), linear-gradient(rgba(230, 127, 54, 0.402), rgba(141, 85, 45, 0.5019607843));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
 }
 .old-blog article:nth-child(5) {
   grid-area: item5;
-  background-color: aqua;
+  background-image: url(./img/image2.png), linear-gradient(rgba(230, 127, 54, 0.402), rgba(141, 85, 45, 0.5019607843));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+.old-blog .blog__grid-item:hover {
+  background-size: 110%;
 }
 
 /* Use color variable, make variable from padding
@@ -241,7 +308,7 @@ and maybe for font size */
 }
 /* Make the hoove work and change the colors of the social icons
 and use the extend for the links*/
-/*Make nav bar hoover*/
+/*Make nav hoover righ color use var*/
 .footer-nav-wrapper {
   display: grid;
   grid-template-areas: "nav1 nav2" "social .";
@@ -267,13 +334,16 @@ and use the extend for the links*/
   height: 0.2em;
   width: 0.2em;
   border-radius: 50%;
-  background-color: rgba(9, 9, 24, 0.9176470588);
+  background-color: white;
   position: absolute;
 }
 .footer-nav-wrapper nav i {
   padding: 10%;
   font-size: 1.5em;
   color: #f8f8f8;
+}
+.footer-nav-wrapper nav i:hover {
+  color: yellow;
 }
 
 .rights {
