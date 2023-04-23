@@ -4,10 +4,14 @@ header {
   display: flex;
   justify-content: space-between;
   margin: 2em;
-  font-size: 1.3em;
+  font-size: 1em;
 }
 header img {
   height: 2.5em;
+}
+header nav {
+  white-space: nowrap;
+  max-width: 80%;
 }
 header nav a {
   text-decoration: none;
@@ -35,8 +39,8 @@ header nav i {
 }
 
 @media screen and (min-width: 1000px) {
-  .menu-toggle {
-    display: none;
+  .fa-bars {
+    visibility: hidden;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -47,9 +51,8 @@ header nav i {
     display: block;
     cursor: pointer;
   }
-  .fa {
+  .fa-bars {
     color: white;
-    height: 5em;
   }
 }
 /*add side bar colors and use variables for colors*/
@@ -60,13 +63,13 @@ header nav i {
   align-items: center;
   padding: 1em;
   background-color: gray;
-  border-radius: 5px;
+  border-radius: 1em;
   max-width: 90%;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 .load-more:hover {
-  background-color: rgba(251, 214, 3, 0.7607843137);
+  background-color: rgba(250, 146, 81, 0.9450980392);
   transition: background-color 0.5s ease-in-out;
 }
 
@@ -92,6 +95,25 @@ header nav i {
   color: #f8f8f8;
 }
 
+.button-dark, .old-blog article:nth-child(1) button, .old-blog article:nth-child(3) button, .old-blog article:nth-child(5) button, .blog article button, .card article:nth-child(1) button, .card article:nth-child(2) button, .card article:nth-child(3) button, .card article:nth-child(4) button, .card article:nth-child(5) button {
+  border-radius: 1em;
+  border-width: 0.2em;
+  border-color: rgba(20, 20, 30, 0.9176470588);
+  background-color: transparent;
+  font-size: 0.4em;
+  letter-spacing: 0.3em;
+}
+
+.button-light, .old-blog article:nth-child(2) button, .old-blog article:nth-child(4) button, .blog article:nth-child(2) button {
+  border-radius: 1em;
+  border-width: 0.2em;
+  background-color: transparent;
+  border-color: #f1f1f1;
+  color: #f1f1f1;
+  font-size: 0.4em;
+  letter-spacing: 0.3em;
+}
+
 /* add color variables and make button, 
 add font size variable etc. use light and tark theme colors*/
 .card {
@@ -101,12 +123,6 @@ add font size variable etc. use light and tark theme colors*/
 }
 .card p {
   padding-top: 2em;
-}
-.card button {
-  border-radius: 1em;
-  border-color: rgba(0, 0, 0, 0.089);
-  font-size: 0.4em;
-  letter-spacing: 0.3em;
 }
 .card .lower {
   padding-top: 17em;
@@ -126,6 +142,11 @@ add font size variable etc. use light and tark theme colors*/
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: overlay;
+  color: #f1f1f1;
+}
+.card article:nth-child(1) button {
+  background-color: rgba(20, 20, 30, 0.9176470588);
+  color: #f1f1f1;
 }
 .card article:nth-child(2) {
   grid-area: item2;
@@ -133,18 +154,32 @@ add font size variable etc. use light and tark theme colors*/
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: overlay;
+  color: #f1f1f1;
+}
+.card article:nth-child(2) button {
+  background-color: #f1f1f1;
+  color: rgba(20, 20, 30, 0.9176470588);
 }
 .card article:nth-child(3) {
   background-image: url(./img/image3.png), linear-gradient(rgba(165, 110, 34, 0.402), rgba(218, 141, 32, 0.5019607843));
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: overlay;
+  color: #f1f1f1;
+}
+.card article:nth-child(3) button {
+  background-color: #f1f1f1;
+  color: rgba(20, 20, 30, 0.9176470588);
 }
 .card article:nth-child(4) {
   background-image: url(./img/image4.png), linear-gradient(rgba(195, 16, 235, 0.402), rgba(70, 11, 60, 0.5019607843));
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: overlay;
+}
+.card article:nth-child(4) button {
+  background-color: rgba(20, 20, 30, 0.9176470588);
+  color: #f1f1f1;
 }
 .card article:nth-child(5) {
   grid-area: item5;
@@ -153,11 +188,15 @@ add font size variable etc. use light and tark theme colors*/
   background-repeat: no-repeat;
   background-blend-mode: overlay;
 }
+.card article:nth-child(5) button {
+  background-color: rgba(20, 20, 30, 0.9176470588);
+  color: #f1f1f1;
+}
 
 /*ad variables ets ADN can you find 
 a way how to apply a style in evey other item?
 
-nd hoer is not workingS*/
+*/
 .blog {
   display: flex;
   flex-direction: column;
@@ -184,6 +223,7 @@ nd hoer is not workingS*/
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: overlay;
+  color: #f1f1f1;
 }
 .blog article:nth-child(3) {
   background-image: url(./img/image4.png);
@@ -368,6 +408,7 @@ and use the extend for the links*/
   white-space: nowrap;
 }
 .footer-nav-wrapper nav a {
+  font-size: 0.8em;
   text-decoration: none;
   color: white;
   margin-right: 1em;
@@ -383,7 +424,7 @@ and use the extend for the links*/
 }
 .footer-nav-wrapper nav i {
   padding: 10%;
-  font-size: 1.5em;
+  font-size: 0.8em;
   color: #f8f8f8;
 }
 .footer-nav-wrapper nav i:hover {
@@ -396,7 +437,7 @@ and use the extend for the links*/
   margin-left: 10%;
 }
 .rights p {
-  font-size: 0.8em;
+  font-size: 0.2em;
   color: #f8f8f8;
 }
 

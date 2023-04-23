@@ -9,11 +9,13 @@ header {
   display: flex;
   justify-content: space-between;
   margin: 2em;
-  font-size: 1.3em;
+  font-size: 1em;
   & img {
     height: 2.5em;
   }
   & nav {
+    white-space: nowrap;
+    max-width: 80%;
     & a {
       text-decoration: none;
       color: link.$link-light;
@@ -45,8 +47,8 @@ header {
 
 @media screen and (min-width: 1000px) {
 
-  .menu-toggle {
-    display: none;
+  .fa-bars {
+    visibility: hidden;
   }
 }
 
@@ -60,9 +62,8 @@ header {
     cursor: pointer;
 
   }
-  .fa {
+  .fa-bars {
     color: white;
-    height: 5em;
   }
   
 }

@@ -1,3 +1,6 @@
+@use "../extends/shared";
+@use "../variables/colors";
+
 /* add color variables and make button, 
 add font size variable etc. use light and tark theme colors*/
 
@@ -10,12 +13,7 @@ add font size variable etc. use light and tark theme colors*/
   & p {
     padding-top: 2em;
   }
-  & button {
-    border-radius: 1em;
-    border-color: rgba(0, 0, 0, 0.089);
-    font-size: 0.4em ;
-    letter-spacing: 0.3em;
-  }
+
   & .lower {
     padding-top: 17em;
   }
@@ -31,39 +29,71 @@ add font size variable etc. use light and tark theme colors*/
   & article:nth-child(1) {
     grid-area: item1;
     background-image: url(./img/image1.png),
-    linear-gradient(rgba(74, 46, 26, 0.402), #423f2680);
+      linear-gradient(rgba(74, 46, 26, 0.402), #423f2680);
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
+    color: colors.$theme-light;
+    & button {
+      @extend.button-dark;
+      background-color: colors.$theme-primary;
+      color:colors.$theme-light; 
+  
+    }
   }
   & article:nth-child(2) {
     grid-area: item2;
     background-image: url(./img/image2.png),
-    linear-gradient(rgba(26, 37, 74, 0.402), #31299a80);
+      linear-gradient(rgba(26, 37, 74, 0.402), #31299a80);
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
+    color: colors.$theme-light;
+    & button {
+      @extend.button-dark;
+      background-color: colors.$theme-light;
+      color:colors.$theme-primary; 
+    }
   }
   & article:nth-child(3) {
     background-image: url(./img/image3.png),
-    linear-gradient(rgba(165, 110, 34, 0.402), #da8d2080);
+      linear-gradient(rgba(165, 110, 34, 0.402), #da8d2080);
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
+    color: colors.$theme-light;
+    & button {
+      @extend.button-dark;
+      background-color: colors.$theme-light;
+      color:colors.$theme-primary; 
+  
+    }
   }
   & article:nth-child(4) {
     background-image: url(./img/image4.png),
-    linear-gradient(rgba(195, 16, 235, 0.402), #460b3c80);
+      linear-gradient(rgba(195, 16, 235, 0.402), #460b3c80);
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
+    & button {
+      @extend.button-dark;
+      background-color: colors.$theme-primary;
+      color:colors.$theme-light; 
+  
+    }
   }
   & article:nth-child(5) {
     grid-area: item5;
     background-image: url(./img/image5.png),
-    linear-gradient(rgba(235, 16, 173, 0.402), #d53ebc80);
+      linear-gradient(rgba(235, 16, 173, 0.402), #d53ebc80);
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
+    & button {
+      @extend.button-dark;
+      background-color: colors.$theme-primary;
+      color:colors.$theme-light; 
+  
+    }
   }
 }

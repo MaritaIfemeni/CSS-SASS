@@ -20,6 +20,7 @@ and use the extend for the links*/
     justify-content: space-between;
     white-space: nowrap;
     & a {
+      font-size: 0.8em;
       text-decoration: none;
       color: link.$link-light;
       margin-right: 1em;
@@ -35,7 +36,7 @@ and use the extend for the links*/
     }
     & i {
       padding: 10%;
-      font-size: 1.5em;
+      font-size: 0.8em;
       color: #f8f8f8;
       &:hover {
         color: orange;
@@ -43,12 +44,15 @@ and use the extend for the links*/
     }
   }
 }
+
 .rights {
   grid-area: "social";
   display: flex;
   margin-left: 10%;
   & p {
-    font-size: 0.8em;
+    font-size: 0.2em;
     color: #f8f8f8;
   }
 }
+
+

@@ -1,5 +1,5 @@
 /*add side bar colors and use variables for colors*/
-@use "../variables/colors" as color;
+@use "../variables/colors";
 
 .load-more {
     margin: auto;
@@ -8,12 +8,12 @@
     align-items: center;
     padding: 1em;
     background-color: gray;
-    border-radius: 5px;
+    border-radius: 1em;
     max-width: 90%;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     &:hover {
-        background-color: #fbd603c2;
+        background-color: colors.$hover-orange;
         transition: background-color 0.5s ease-in-out;
     }
   }
@@ -24,7 +24,7 @@
     left: 0;
     width: 2em;
     height: 100%;
-    color:color.$theme-primary;
+    color:colors.$theme-primary;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;

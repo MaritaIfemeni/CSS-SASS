@@ -1,7 +1,9 @@
 /*ad variables ets ADN can you find 
 a way how to apply a style in evey other item?
 
-nd hoer is not workingS*/
+*/
+@use "../extends/shared";
+@use "../variables/colors";
 
 .blog {
   display: flex;
@@ -16,6 +18,9 @@ nd hoer is not workingS*/
     & h3 {
       font-size: 1.5em;
     }
+    & button {
+      @extend.button-dark;
+    }
   }
   & article:nth-child(1) {
     background-image: url(./img/image1.png);
@@ -29,6 +34,10 @@ nd hoer is not workingS*/
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
+    color: colors.$theme-light;
+    & button {
+      @extend.button-light;
+    }
   }
   & article:nth-child(3) {
     background-image: url(./img/image4.png);
@@ -48,8 +57,6 @@ nd hoer is not workingS*/
     transform: scaleX(1.5);
   }
 }
-
-
 
 .divider {
   display: flex;

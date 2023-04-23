@@ -1,0 +1,20 @@
+@use "../variables/colors" as color;
+
+.button-dark {
+  border-radius: 1em;
+  border-width: 0.2em;
+  border-color: color.$theme-primary;
+  background-color: transparent;
+  font-size: 0.4em;
+  letter-spacing: 0.3em;
+}
+
+.button-light {
+  border-radius: 1em;
+  border-width: 0.2em;
+  background-color: transparent;
+  border-color: color.$theme-light;
+  color: color.$theme-light;
+  font-size: 0.4em;
+  letter-spacing: 0.3em;
+}
