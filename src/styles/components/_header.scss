@@ -23,7 +23,7 @@ header {
         height: 0.2em;
         width: 0.2em;
         border-radius: 50%;
-        background-color: link.$link-light;
+        background-color: orange;
         position: absolute;
       }
     }
@@ -33,7 +33,7 @@ header {
         height: 0.2em;
         width: 0.2em;
         border-radius: 50%;
-        background-color: link.$link-light;
+        background-color: orange;
         position: absolute;
       }
     }
@@ -41,4 +41,28 @@ header {
       color: link.$link-light;
     }
   }
+}
+
+@media screen and (min-width: 1000px) {
+
+  .menu-toggle {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .menu {
+    display: none;
+  }
+  
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+
+  }
+  .fa {
+    color: white;
+    height: 5em;
+  }
+  
 }

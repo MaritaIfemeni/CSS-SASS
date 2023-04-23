@@ -13,6 +13,9 @@ nd hoer is not workingS*/
     padding: 12em;
     border-radius: 3em;
     cursor: pointer;
+    & h3 {
+      font-size: 1.5em;
+    }
   }
   & article:nth-child(1) {
     background-image: url(./img/image1.png);
@@ -32,6 +35,18 @@ nd hoer is not workingS*/
     background-size: cover;
     background-repeat: no-repeat;
   }
+  & article:hover {
+    background-size: 101%;
+  }
+  & h3 i {
+    visibility: hidden;
+    transition: transform 0.5s ease-out;
+    padding-left: 0.7em;
+  }
+  & h3:hover i{
+    visibility: visible;
+    transform: scaleX(1.5);
+  }
 }
 
 
@@ -40,7 +55,6 @@ nd hoer is not workingS*/
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1em;
   color: #f1f1f1;
   border-radius: 5px;
   padding-left: 3em;

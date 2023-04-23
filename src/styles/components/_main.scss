@@ -1,5 +1,5 @@
 /*add side bar colors and use variables for colors*/
-
+@use "../variables/colors" as color;
 
 .load-more {
     margin: auto;
@@ -24,7 +24,7 @@
     left: 0;
     width: 2em;
     height: 100%;
-    background-color:black;
+    color:color.$theme-primary;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -35,8 +35,8 @@
         text-orientation: mixed;
         transform: rotate(180deg);
         margin: 0;
-        padding: 0;
-        font-size: 1.5em;
+        padding: 0.2em;
+        font-size: 1em;
         color: #f8f8f8;
     }
   }

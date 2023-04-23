@@ -12,7 +12,9 @@ add font size variable etc. use light and tark theme colors*/
   }
   & button {
     border-radius: 1em;
-    border-color: rgba(0, 0, 0, 0.263);
+    border-color: rgba(0, 0, 0, 0.089);
+    font-size: 0.4em ;
+    letter-spacing: 0.3em;
   }
   & .lower {
     padding-top: 17em;

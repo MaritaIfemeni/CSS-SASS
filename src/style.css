@@ -19,7 +19,7 @@ header nav a:hover::after {
   height: 0.2em;
   width: 0.2em;
   border-radius: 50%;
-  background-color: white;
+  background-color: orange;
   position: absolute;
 }
 header nav a:first-child::after {
@@ -27,13 +27,31 @@ header nav a:first-child::after {
   height: 0.2em;
   width: 0.2em;
   border-radius: 50%;
-  background-color: white;
+  background-color: orange;
   position: absolute;
 }
 header nav i {
   color: white;
 }
 
+@media screen and (min-width: 1000px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .menu {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+  .fa {
+    color: white;
+    height: 5em;
+  }
+}
 /*add side bar colors and use variables for colors*/
 .load-more {
   margin: auto;
@@ -58,7 +76,7 @@ header nav i {
   left: 0;
   width: 2em;
   height: 100%;
-  background-color: black;
+  color: rgba(20, 20, 30, 0.9176470588);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -69,8 +87,8 @@ header nav i {
   text-orientation: mixed;
   transform: rotate(180deg);
   margin: 0;
-  padding: 0;
-  font-size: 1.5em;
+  padding: 0.2em;
+  font-size: 1em;
   color: #f8f8f8;
 }
 
@@ -86,7 +104,9 @@ add font size variable etc. use light and tark theme colors*/
 }
 .card button {
   border-radius: 1em;
-  border-color: rgba(0, 0, 0, 0.263);
+  border-color: rgba(0, 0, 0, 0.089);
+  font-size: 0.4em;
+  letter-spacing: 0.3em;
 }
 .card .lower {
   padding-top: 17em;
@@ -150,6 +170,9 @@ nd hoer is not workingS*/
   border-radius: 3em;
   cursor: pointer;
 }
+.blog article h3 {
+  font-size: 1.5em;
+}
 .blog article:nth-child(1) {
   background-image: url(./img/image1.png);
   background-size: cover;
@@ -167,12 +190,23 @@ nd hoer is not workingS*/
   background-size: cover;
   background-repeat: no-repeat;
 }
+.blog article:hover {
+  background-size: 101%;
+}
+.blog h3 i {
+  visibility: hidden;
+  transition: transform 0.5s ease-out;
+  padding-left: 0.7em;
+}
+.blog h3:hover i {
+  visibility: visible;
+  transform: scaleX(1.5);
+}
 
 .divider {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1em;
   color: #f1f1f1;
   border-radius: 5px;
   padding-left: 3em;
@@ -184,6 +218,7 @@ nd hoer is not workingS*/
   display: grid;
   grid-template-areas: "item1 item1 item1 item2 item2 item2" "item1 item1 item1 item2 item2 item2" "item3 item3 item4 item4 item5 item5";
   gap: 1em;
+  margin: 5em;
 }
 .old-blog article {
   border-radius: 2em;
@@ -191,7 +226,7 @@ nd hoer is not workingS*/
 }
 .old-blog article:nth-child(1) {
   grid-area: item1;
-  background-image: url(./img/image2.png), linear-gradient(rgba(230, 127, 54, 0.402), rgba(141, 85, 45, 0.5019607843));
+  background-image: url(./img/image1.png), linear-gradient(rgba(230, 127, 54, 0.402), rgba(141, 85, 45, 0.5019607843));
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: overlay;
@@ -205,27 +240,36 @@ nd hoer is not workingS*/
 }
 .old-blog article:nth-child(3) {
   grid-area: item3;
-  background-image: url(./img/image2.png), linear-gradient(rgba(230, 127, 54, 0.402), rgba(141, 85, 45, 0.5019607843));
+  background-image: url(./img/image6.png), linear-gradient(rgba(230, 127, 54, 0.402), rgba(141, 85, 45, 0.5019607843));
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: overlay;
 }
 .old-blog article:nth-child(4) {
   grid-area: item4;
-  background-image: url(./img/image2.png), linear-gradient(rgba(230, 127, 54, 0.402), rgba(141, 85, 45, 0.5019607843));
+  background-image: url(./img/image7.png), linear-gradient(rgba(230, 127, 54, 0.402), rgba(141, 85, 45, 0.5019607843));
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: overlay;
 }
 .old-blog article:nth-child(5) {
   grid-area: item5;
-  background-image: url(./img/image2.png), linear-gradient(rgba(230, 127, 54, 0.402), rgba(141, 85, 45, 0.5019607843));
+  background-image: url(./img/image6.png), linear-gradient(rgba(230, 127, 54, 0.402), rgba(141, 85, 45, 0.5019607843));
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: overlay;
 }
-.old-blog .blog__grid-item:hover {
-  background-size: 110%;
+.old-blog article:hover {
+  background-size: 101%;
+}
+.old-blog h3 i {
+  visibility: hidden;
+  transition: transform 0.5s ease-out;
+  padding-left: 0.7em;
+}
+.old-blog h3:hover i {
+  visibility: visible;
+  transform: scaleX(1.5);
 }
 
 /* Use color variable, make variable from padding
@@ -334,7 +378,7 @@ and use the extend for the links*/
   height: 0.2em;
   width: 0.2em;
   border-radius: 50%;
-  background-color: white;
+  background-color: orange;
   position: absolute;
 }
 .footer-nav-wrapper nav i {
@@ -343,7 +387,7 @@ and use the extend for the links*/
   color: #f8f8f8;
 }
 .footer-nav-wrapper nav i:hover {
-  color: yellow;
+  color: orange;
 }
 
 .rights {
@@ -352,7 +396,7 @@ and use the extend for the links*/
   margin-left: 10%;
 }
 .rights p {
-  font-size: 1em;
+  font-size: 0.8em;
   color: #f8f8f8;
 }
 
