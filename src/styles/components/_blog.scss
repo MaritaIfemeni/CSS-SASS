@@ -1,7 +1,4 @@
-/*ad variables ets ADN can you find 
-a way how to apply a style in evey other item?
 
-*/
 @use "../extends/shared";
 @use "../variables/colors";
 
@@ -12,6 +9,12 @@ a way how to apply a style in evey other item?
   justify-content: center;
   margin: 5em;
   & article {
+    &:nth-child(even) {
+      color: colors.$theme-light;
+    }
+    &:nth-child(odd) {
+      color: colors.$theme-primary;
+    }
     padding: 12em;
     border-radius: 3em;
     cursor: pointer;
@@ -34,7 +37,6 @@ a way how to apply a style in evey other item?
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
-    color: colors.$theme-light;
     & button {
       @extend.button-light;
     }
@@ -66,4 +68,16 @@ a way how to apply a style in evey other item?
   border-radius: 5px;
   padding-left: 3em;
   padding-right: 3em;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .blog {
+    margin: 2em;
+    & article {
+      padding: 6em;
+      border-radius: 2em;
+    }
+  }
+  
 }

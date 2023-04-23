@@ -1,0 +1,11 @@
+@use "../extends/shared";
+
+@mixin button-style($bg-color, $text-color) {
+    @extend.button-dark;
+    background-color: $bg-color;
+    color: $text-color;
+  }
+
+@mixin font-color($color) {
+    color: $color;
+  }

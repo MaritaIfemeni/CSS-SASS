@@ -1,9 +1,5 @@
-@use "../variables/colors" as link;
-@use "../variables/fonts" as font;
-
-/* Make the hoove work and change the colors of the social icons
-and use the extend for the links*/
-/*Make nav hoover righ color use var*/
+@use "../variables/colors";
+@use "../variables/shared";
 
 .footer-nav-wrapper {
   display: grid;
@@ -21,8 +17,8 @@ and use the extend for the links*/
     white-space: nowrap;
     & a {
       font-size: 0.8em;
-      text-decoration: none;
-      color: link.$link-light;
+      text-decoration: shared.$link-decoration;
+      color: colors.$link-light;
       margin-right: 1em;
       padding: 1%;
       &:hover::after {

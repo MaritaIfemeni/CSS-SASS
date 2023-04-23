@@ -8,8 +8,12 @@
 
 @use "extends/shared";
 
+
 @use "variables/colors";
 @use "variables/fonts";
+
+@import "mixins/backgrounds";
+@import "mixins/shared";
 
 body {
     margin: 4em;

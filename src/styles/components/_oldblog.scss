@@ -10,11 +10,23 @@
     "item3 item3 item4 item4 item5 item5";
   gap: 1em;
   margin: 5em;
-
+  margin: 5em;
   & article {
     border-radius: 2em;
     padding: 5em;
+    &:nth-child(odd) {
+      color: colors.$theme-light;
+      & button {
+        @extend.button-light;
+      }
     }
+    &:nth-child(even) {
+      color: colors.$theme-primary;
+      & button {
+        @extend.button-dark;
+      }
+    }
+  }
   & article:nth-child(1) {
     grid-area: item1;
     background-image: url(./img/image1.png),
@@ -22,21 +34,14 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
-    & button {
-      @extend.button-dark;
-    }
-    
   }
   & article:nth-child(2) {
     grid-area: item2;
     background-image: url(./img/image2.png),
-      linear-gradient(rgba(230, 127, 54, 0.402), #8d552d80);
+      linear-gradient(rgba(250, 111, 12, 0.943), #fc6900f7);
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
-    & button {
-      @extend.button-light;
-    }
   }
   & article:nth-child(3) {
     grid-area: item3;
@@ -45,9 +50,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
-    & button {
-      @extend.button-dark;
-    }
   }
   & article:nth-child(4) {
     grid-area: item4;
@@ -56,20 +58,14 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
-    & button {
-      @extend.button-light;
-    }
   }
   & article:nth-child(5) {
     grid-area: item5;
     background-image: url(./img/image6.png),
-      linear-gradient(rgba(230, 127, 54, 0.402), #8d552d80);
+      linear-gradient(rgba(62, 20, 216, 0.402), #8d552d80);
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
-    & button {
-      @extend.button-dark;
-    }
   }
   & article:hover {
     background-size: 101%;
@@ -79,8 +75,18 @@
     transition: transform 0.5s ease-out;
     padding-left: 0.7em;
   }
-  & h3:hover i{
+  & h3:hover i {
     visibility: visible;
     transform: scaleX(1.5);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .old-blog {
+    margin: 2em;
+    & article {
+      padding: 3em;
+      border-radius: 2em;
+    }
   }
 }

@@ -1,5 +1,5 @@
-@use "../variables/colors" as link;
-@use "../variables/fonts" as font;
+@use "../variables/colors";
+@use "../variables/shared";
 
 
 /* make extend/ mixing for for the link dec
@@ -17,8 +17,8 @@ header {
     white-space: nowrap;
     max-width: 80%;
     & a {
-      text-decoration: none;
-      color: link.$link-light;
+      text-decoration: shared.$link-decoration;
+      color: colors.$link-light;
       margin-right: 1em;
       &:hover::after {
         content: "";
@@ -40,7 +40,7 @@ header {
       }
     }
     & i {
-      color: link.$link-light;
+      color: colors.$link-light;
     }
   }
 }

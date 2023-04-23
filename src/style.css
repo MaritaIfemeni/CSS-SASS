@@ -95,7 +95,12 @@ header nav i {
   color: #f8f8f8;
 }
 
-.button-dark, .old-blog article:nth-child(1) button, .old-blog article:nth-child(3) button, .old-blog article:nth-child(5) button, .blog article button, .card article:nth-child(1) button, .card article:nth-child(2) button, .card article:nth-child(3) button, .card article:nth-child(4) button, .card article:nth-child(5) button {
+@media screen and (max-width: 1000px) {
+  .sidebar {
+    display: none;
+  }
+}
+.button-dark, .old-blog article:nth-child(even) button, .blog article button, .card article:nth-child(1) button, .card article:nth-child(2) button, .card article:nth-child(3) button, .card article:nth-child(4) button, .card article:nth-child(5) button {
   border-radius: 1em;
   border-width: 0.2em;
   border-color: rgba(20, 20, 30, 0.9176470588);
@@ -104,7 +109,7 @@ header nav i {
   letter-spacing: 0.3em;
 }
 
-.button-light, .old-blog article:nth-child(2) button, .old-blog article:nth-child(4) button, .blog article:nth-child(2) button {
+.button-light, .old-blog article:nth-child(odd) button, .blog article:nth-child(2) button {
   border-radius: 1em;
   border-width: 0.2em;
   background-color: transparent;
@@ -114,8 +119,25 @@ header nav i {
   letter-spacing: 0.3em;
 }
 
-/* add color variables and make button, 
-add font size variable etc. use light and tark theme colors*/
+.button-dark, .card article:nth-child(5) button, .card article:nth-child(4) button, .card article:nth-child(3) button, .card article:nth-child(2) button, .card article:nth-child(1) button {
+  border-radius: 1em;
+  border-width: 0.2em;
+  border-color: rgba(20, 20, 30, 0.9176470588);
+  background-color: transparent;
+  font-size: 0.4em;
+  letter-spacing: 0.3em;
+}
+
+.button-light {
+  border-radius: 1em;
+  border-width: 0.2em;
+  background-color: transparent;
+  border-color: #f1f1f1;
+  color: #f1f1f1;
+  font-size: 0.4em;
+  letter-spacing: 0.3em;
+}
+
 .card {
   display: grid;
   grid-template-areas: "item1 item1 item2 item3" "item1 item1 item4 item5";
@@ -138,7 +160,7 @@ add font size variable etc. use light and tark theme colors*/
 }
 .card article:nth-child(1) {
   grid-area: item1;
-  background-image: url(./img/image1.png), linear-gradient(rgba(74, 46, 26, 0.402), rgba(66, 63, 38, 0.5019607843));
+  background-image: url("./img/image1.png"), linear-gradient(rgba(74, 46, 26, 0.402), rgba(66, 63, 38, 0.5019607843));
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: overlay;
@@ -150,53 +172,62 @@ add font size variable etc. use light and tark theme colors*/
 }
 .card article:nth-child(2) {
   grid-area: item2;
-  background-image: url(./img/image2.png), linear-gradient(rgba(26, 37, 74, 0.402), rgba(49, 41, 154, 0.5019607843));
+  background-image: url("./img/image2.png"), linear-gradient(rgba(26, 37, 74, 0.402), rgba(49, 41, 154, 0.5019607843));
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: overlay;
   color: #f1f1f1;
-}
-.card article:nth-child(2) button {
-  background-color: #f1f1f1;
   color: rgba(20, 20, 30, 0.9176470588);
 }
+.card article:nth-child(2) button {
+  background-color: rgba(20, 20, 30, 0.9176470588);
+  color: #f1f1f1;
+}
 .card article:nth-child(3) {
-  background-image: url(./img/image3.png), linear-gradient(rgba(165, 110, 34, 0.402), rgba(218, 141, 32, 0.5019607843));
+  background-image: url("./img/image3.png"), linear-gradient(rgba(165, 110, 34, 0.402), rgba(218, 141, 32, 0.5019607843));
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: overlay;
   color: #f1f1f1;
+  color: rgba(20, 20, 30, 0.9176470588);
 }
 .card article:nth-child(3) button {
   background-color: #f1f1f1;
   color: rgba(20, 20, 30, 0.9176470588);
 }
 .card article:nth-child(4) {
-  background-image: url(./img/image4.png), linear-gradient(rgba(195, 16, 235, 0.402), rgba(70, 11, 60, 0.5019607843));
+  background-image: url("./img/image4.png"), linear-gradient(rgba(195, 16, 235, 0.402), rgba(70, 11, 60, 0.5019607843));
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: overlay;
+  color: #f1f1f1;
 }
 .card article:nth-child(4) button {
-  background-color: rgba(20, 20, 30, 0.9176470588);
-  color: #f1f1f1;
+  background-color: #f1f1f1;
+  color: rgba(20, 20, 30, 0.9176470588);
 }
 .card article:nth-child(5) {
   grid-area: item5;
-  background-image: url(./img/image5.png), linear-gradient(rgba(235, 16, 173, 0.402), rgba(213, 62, 188, 0.5019607843));
+  background-image: url("./img/image5.png"), linear-gradient(rgba(235, 16, 173, 0.402), rgba(213, 62, 188, 0.5019607843));
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: overlay;
+  color: #f1f1f1;
 }
 .card article:nth-child(5) button {
   background-color: rgba(20, 20, 30, 0.9176470588);
   color: #f1f1f1;
 }
 
-/*ad variables ets ADN can you find 
-a way how to apply a style in evey other item?
-
-*/
+@media screen and (max-width: 1000px) {
+  .card {
+    margin: 1.5em;
+  }
+  .card article {
+    padding: 1em;
+    border-radius: 2em;
+  }
+}
 .blog {
   display: flex;
   flex-direction: column;
@@ -208,6 +239,12 @@ a way how to apply a style in evey other item?
   padding: 12em;
   border-radius: 3em;
   cursor: pointer;
+}
+.blog article:nth-child(even) {
+  color: #f1f1f1;
+}
+.blog article:nth-child(odd) {
+  color: rgba(20, 20, 30, 0.9176470588);
 }
 .blog article h3 {
   font-size: 1.5em;
@@ -223,7 +260,6 @@ a way how to apply a style in evey other item?
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: overlay;
-  color: #f1f1f1;
 }
 .blog article:nth-child(3) {
   background-image: url(./img/image4.png);
@@ -253,16 +289,32 @@ a way how to apply a style in evey other item?
   padding-right: 3em;
 }
 
+@media screen and (max-width: 1000px) {
+  .blog {
+    margin: 2em;
+  }
+  .blog article {
+    padding: 6em;
+    border-radius: 2em;
+  }
+}
 /* make variables, color thing, optomize code?*/
 .old-blog {
   display: grid;
   grid-template-areas: "item1 item1 item1 item2 item2 item2" "item1 item1 item1 item2 item2 item2" "item3 item3 item4 item4 item5 item5";
   gap: 1em;
   margin: 5em;
+  margin: 5em;
 }
 .old-blog article {
   border-radius: 2em;
   padding: 5em;
+}
+.old-blog article:nth-child(odd) {
+  color: #f1f1f1;
+}
+.old-blog article:nth-child(even) {
+  color: rgba(20, 20, 30, 0.9176470588);
 }
 .old-blog article:nth-child(1) {
   grid-area: item1;
@@ -273,7 +325,7 @@ a way how to apply a style in evey other item?
 }
 .old-blog article:nth-child(2) {
   grid-area: item2;
-  background-image: url(./img/image2.png), linear-gradient(rgba(230, 127, 54, 0.402), rgba(141, 85, 45, 0.5019607843));
+  background-image: url(./img/image2.png), linear-gradient(rgba(250, 111, 12, 0.943), rgba(252, 105, 0, 0.968627451));
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: overlay;
@@ -294,7 +346,7 @@ a way how to apply a style in evey other item?
 }
 .old-blog article:nth-child(5) {
   grid-area: item5;
-  background-image: url(./img/image6.png), linear-gradient(rgba(230, 127, 54, 0.402), rgba(141, 85, 45, 0.5019607843));
+  background-image: url(./img/image6.png), linear-gradient(rgba(62, 20, 216, 0.402), rgba(141, 85, 45, 0.5019607843));
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: overlay;
@@ -312,6 +364,15 @@ a way how to apply a style in evey other item?
   transform: scaleX(1.5);
 }
 
+@media screen and (max-width: 1000px) {
+  .old-blog {
+    margin: 2em;
+  }
+  .old-blog article {
+    padding: 3em;
+    border-radius: 2em;
+  }
+}
 /* Use color variable, make variable from padding
 and maybe for font size */
 .subscribe {
@@ -364,11 +425,12 @@ and maybe for font size */
   color: white;
   font-size: 1.5em;
   cursor: pointer;
-  transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 .subscribe button:hover {
   background-color: white;
   color: black;
+  transform: scaleX(1.1);
 }
 
 @keyframes typing {
@@ -390,9 +452,6 @@ and maybe for font size */
     border-color: white;
   }
 }
-/* Make the hoove work and change the colors of the social icons
-and use the extend for the links*/
-/*Make nav hoover righ color use var*/
 .footer-nav-wrapper {
   display: grid;
   grid-template-areas: "nav1 nav2" "social .";
@@ -439,6 +498,25 @@ and use the extend for the links*/
 .rights p {
   font-size: 0.2em;
   color: #f8f8f8;
+}
+
+.button-dark {
+  border-radius: 1em;
+  border-width: 0.2em;
+  border-color: rgba(20, 20, 30, 0.9176470588);
+  background-color: transparent;
+  font-size: 0.4em;
+  letter-spacing: 0.3em;
+}
+
+.button-light {
+  border-radius: 1em;
+  border-width: 0.2em;
+  background-color: transparent;
+  border-color: #f1f1f1;
+  color: #f1f1f1;
+  font-size: 0.4em;
+  letter-spacing: 0.3em;
 }
 
 body {
